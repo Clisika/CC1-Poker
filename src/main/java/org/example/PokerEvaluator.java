@@ -14,6 +14,13 @@ public class PokerEvaluator {
             valueCounts.put(value, valueCounts.getOrDefault(value, 0) + 1);
         }
 
+        // 4 même cartes
+        for (int count : valueCounts.values()) {
+            if (count == 4) {
+                return 60;
+            }
+        }
+
         // Full
         if (valueCounts.containsValue(3) && valueCounts.containsValue(2)) {
             return 50;
@@ -44,6 +51,7 @@ public class PokerEvaluator {
             }
         }
         return maxValue;
+
     }
 
     private static boolean isStraight(int[][] hand) {
