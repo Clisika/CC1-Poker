@@ -14,6 +14,11 @@ public class PokerEvaluator {
             valueCounts.put(value, valueCounts.getOrDefault(value, 0) + 1);
         }
 
+        // Full
+        if (valueCounts.containsValue(3) && valueCounts.containsValue(2)) {
+            return 50;
+        }
+
         // Brelan
         for (int count : valueCounts.values()) {
             if (count == 3) {
