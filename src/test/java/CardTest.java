@@ -57,5 +57,19 @@ class CardTest {
         int score = PokerEvaluator.evaluate(hand);
         assertEquals(50, score);
     }
+
+    @Test
+    void shouldReturnFourOfAKind() {
+        int[][] hand = {
+                {5, 1},
+                {5, 2},
+                {5, 3},
+                {5, 4},
+                {9, 1}
+        };
+
+        int score = PokerEvaluator.evaluate(hand);
+        assertEquals(60, score);
+    }
 }
 
