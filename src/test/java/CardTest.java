@@ -43,5 +43,19 @@ class CardTest {
         int score = PokerEvaluator.evaluate(hand);
         assertEquals(45, score);
     }
+
+    @Test
+    void shouldReturnFull() {
+        int[][] hand = {
+                {2, 1},
+                {2, 2},
+                {2, 3},
+                {9, 1},
+                {9, 2}
+        };
+
+        int score = PokerEvaluator.evaluate(hand);
+        assertEquals(50, score);
+    }
 }
 

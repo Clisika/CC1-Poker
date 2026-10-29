@@ -14,7 +14,7 @@ public class PokerEvaluator {
             valueCounts.put(value, valueCounts.getOrDefault(value, 0) + 1);
         }
 
-        // Brelan (30 pts)
+        // Brelan
         for (int count : valueCounts.values()) {
             if (count == 3) {
                 return 30;
